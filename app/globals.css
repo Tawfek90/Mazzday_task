@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+table {
+  border: 2px solid #000;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+}
+
+.selContainer {
+  text-transform: capitalize;
+}
+.selContainer p {
+  margin-bottom: 0.5rem;
+}
+
+.selContainer select {
+  text-transform: capitalize;
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 0.25rem 0;
+  width: 100%;
+}
