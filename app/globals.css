@@ -38,11 +38,22 @@ table td {
   padding: 0.5rem 1rem;
 }
 
+.table_container {
+  width: min(900px, 100% - 3rem);
+  margin-inline: auto;
+}
+.table_container table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #323232;
+  columns: #fff;
+}
 .selContainer {
   text-transform: capitalize;
 }
 .selContainer p {
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .selContainer select {

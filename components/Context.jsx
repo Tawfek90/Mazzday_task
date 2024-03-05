@@ -13,6 +13,16 @@ export default function Context({ children }) {
   const [process, setProcess] = useState("");
   const [brand, setBrand] = useState("");
   const [transmition, setTransmition] = useState("");
+  const [model, setModel] = useState("");
+  const [modelData, setModelData] = useState([]);
+  const [type, setType] = useState("");
+  const [fuelType, setFuelType] = useState("");
+  const [condition, setCondition] = useState("");
+  const [color, setColor] = useState("");
+  const [cylindersValue, setCylindersValue] = useState("");
+  const [drive, setDrive] = useState("");
+  const [other, setOther] = useState("");
+
   return (
     <AppContext.Provider
       value={{
@@ -30,6 +40,24 @@ export default function Context({ children }) {
         setBrand,
         transmition,
         setTransmition,
+        model,
+        setModel,
+        modelData,
+        setModelData,
+        type,
+        setType,
+        fuelType,
+        setFuelType,
+        condition,
+        setCondition,
+        color,
+        setColor,
+        cylindersValue,
+        setCylindersValue,
+        drive,
+        setDrive,
+        other,
+        setOther,
       }}
     >
       {children}

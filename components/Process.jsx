@@ -14,7 +14,8 @@ async function fetchData() {
   return responseData.data;
 }
 export default function Process() {
-  const { propsData, setPropsData, process, setProcess } = useGlobalContext();
+  const { propsData, setPropsData, process, setProcess, other, setOther } =
+    useGlobalContext();
   useEffect(() => {
     const fetchDataAsync = async () => {
       const res = await fetchData();
@@ -35,15 +36,14 @@ export default function Process() {
             setProcess(e.target.value);
           }}
         >
-          {propsData?.map((prop) => {
+          {propsData[0]?.options.map((prop) => {
             return (
-              <>
-                <option value={prop.slug} key={prop.id}>
-                  {prop.slug}
-                </option>
-              </>
+              <option value={prop.slug} key={prop.id}>
+                {prop.slug}
+              </option>
             );
           })}
+
           <option value="other">other</option>
         </select>
       </div>
@@ -53,7 +53,9 @@ export default function Process() {
           type="text"
           placeholder="please enter what you search for"
           name=""
-          id=""
+          value={other}
+          onChange={(e) => setOther(e.target.value)}
+          className=" my-2 p-1"
         />
       )}
     </>
